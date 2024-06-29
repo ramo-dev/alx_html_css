@@ -1,0 +1,130 @@
+:root {
+  --primary: #c271ff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Inter", sans-serif;
+}
+body {
+  background: url("./images/background.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  backdrop-filter: grayscale();
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: -5%;
+  left: 0%;
+  z-index: -1;
+  background:linear-gradient(to bottom, rgba(255, 255, 255, 0.185), black);
+  box-shadow: 0 0 300px hsla(0, 0%, 0%, 0.973);
+  /* border-radius: 100%; */
+  width: 100%;
+  height: 30%;
+}
+.button {
+  background: var(--primary);
+  color: white;
+  width: max-content;
+  padding: 10px;
+  font-size: 13px;
+  border-radius: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.514);
+  border: 1px solid #c271ff;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+}
+nav .logo {
+  width: 150px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+  font-size: 13px;
+}
+nav ul a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+  position: relative;
+  height: 120vh;
+}
+
+.hero-call-to-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  margin-top: 150px;
+  height: 100vh;
+  color: white;
+  text-align: center;
+}
+.hero-call-to-action h1 {
+  font-size: 80px;
+  margin: 0;
+  font-weight: bolder;
+}
+.subtext {
+  display: flex;
+  gap: 40px;
+  margin: 20px 0;
+  font-size: 17px;
+  font-weight: bold;
+  justify-content: center;
+}
+.hero2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.hero2 h2 {
+  position: absolute;
+  top: 470px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.hero h2 span {
+  color: var(--primary);
+}
+.hero2 .hero-highlight {
+  display: flex;
+  justify-content: flex-start;
+  gap: 50px;
+}
+.hero2 .hero-highlight div {
+  text-align: center;
+}
+.hero2 div img {
+  border-radius: 50%;
+  width: 130px;
+}
+.hero2 .hero-highlight div > h3, p{
+    color: white;
+    font-size: 13px;
+    text-wrap: wrap;
+    max-width: 150px;
+
+}
+.hero2 .hero-highlight div > h3{
+    font-weight: bold;
+}

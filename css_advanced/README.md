@@ -1,1 +1,1 @@
-This a 
+This a smiles academy landingpage with advanced custom styling
