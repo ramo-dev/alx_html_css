@@ -1,0 +1,266 @@
+/* Font import */
+@font-face {
+  font-family: "SourceSans";
+  src: url('fonts/source-sans-pro/SourceSansPro-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceSans-bold";
+  src: url('fonts/source-sans-pro/SourceSansPro-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "SourceSans", sans-serif;
+}
+
+/* CSS Variables */
+:root {
+  --primary-color: #ff6565;
+  --white: #ffffff;
+  --max-width: 1000px;
+  --font-family: "SourceSans", sans-serif;
+  --font-size-base: 14px;
+  --font-size-large: 32px;
+  --font-size-small: 16px;
+  --line-height: 1;
+  --border-radius: 50px;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: url("./thumbnails/headphones_hero_1.jpg");
+  background-size: cover;
+  overflow-y: auto;
+  background-repeat: no-repeat;
+  background-position: top;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+  color: var(--white);
+}
+
+/*header/ hero section*/
+.hidden {
+  display: none;
+}
+
+.holberton_school-icon-menu{
+  display: none;
+}
+.nav-toggle-checkbox{
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  padding-left: 20px;
+}
+
+.nav-links a {
+  color: var(--white);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a:active {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Hero section*/
+.hero {
+  padding: 20px 0;
+  display: flex;
+}
+
+.hero-content {
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.container h1 {
+  font-size: var(--font-size-large);
+  margin-bottom: 10px;
+  color: #ffffff;
+  margin-top: 250px;
+  font-family: "SourceSans-bold";
+}
+
+.container p {
+  font-size: var(--font-size-small);
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  margin-bottom: 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  font-weight: bold;
+  width: 162px;
+  height: 44px;
+}
+
+.btn:hover,
+.btn:active {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.description {
+  max-width: 690px;
+  margin: 0 auto;
+  line-height: var(--line-height);
+  margin-top: 60px;
+  font-weight: 400 !important;
+  font-size: var(--font-size-small);
+}
+    /*what to do section*/
+    .what-we-do{
+      background-color: var(--white);
+      color: #333;
+      padding: 50px 0;
+    }
+    .what-we-do h2 {
+      text-align: center;
+      font-size: var(--font-size-large);
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .what-we-do p {
+    text-align: center;
+    font-size: var(--font-size-small);
+    margin-bottom: 40px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #333;
+    justify-content: center;
+    }
+    .services {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+
+    /*Responsive Design*/
+    @media only screen and (max-width: 768px) {
+      body {
+        overflow-y: auto;
+        
+      }
+    
+      .navbar {
+        position: relative;
+        padding: 0 20px;
+      }
+      .container{
+        padding: 0 20px;
+
+      }
+    
+      .holberton_school-icon-menu {
+        display: block;
+        cursor: pointer;
+        color: var(--white);
+        font-size: 34px;
+      }
+    
+      .nav-links {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        top: 60px; /* Adjust as needed based on your header height */
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+      }
+    
+      .nav-toggle-checkbox {
+        display: none;
+      }
+    
+      .nav-toggle-checkbox:checked + .nav-links {
+        display: flex;
+      }
+    
+      .nav-links li {
+        margin-top: 10px;
+      }
+    
+      .nav-links a {
+        color: var(--white);
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+      }
+    
+      .nav-links a:hover,
+      .nav-links a:active {
+        color: var(--primary-color);
+      }
+    
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 60px;
+      }
+    }
+    
+@media only screen and (max-width:480) {
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+}
+
+.service {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+}
+}
